@@ -1,5 +1,7 @@
 # Heb1: free Hebrew OCR in one place
 
+![A wooden desk with a blank open book, a magnifying glass, a pencil case and a stack of closed books](docs/social-preview.png)
+
 Heb1 collects the free and open tools, models and datasets for reading Hebrew from images: printed text, handwriting, and Torah, siddur and manuscript pages. It also includes the Hebrew text tools you need after OCR, such as vowel marks (nikud), morphology and normalization. You also get:
 
 - a **catalog** of every resource, with its licence written down exactly as its source states it;
