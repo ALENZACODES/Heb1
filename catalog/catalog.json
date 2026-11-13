@@ -1,0 +1,1351 @@
+{
+ "checked": "2026-11-12",
+ "entries": [
+  {
+   "id": "tesseract",
+   "name": "Tesseract OCR",
+   "type": "engine",
+   "task": "printed OCR",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/tesseract-ocr/tesseract",
+   "size": "",
+   "license_source": "repository licence field / model card",
+   "notes": "The engine the pipeline here drives. Hebrew via the heb model; LSTM engine (--oem 1)."
+  },
+  {
+   "id": "tesseract.js",
+   "name": "Tesseract.js",
+   "type": "engine",
+   "task": "printed OCR (browser)",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/naptha/tesseract.js",
+   "size": "",
+   "license_source": "repository licence field / model card",
+   "notes": "Tesseract compiled to WebAssembly; what an offline web app uses for camera OCR."
+  },
+  {
+   "id": "kraken",
+   "name": "kraken",
+   "type": "engine",
+   "task": "handwriting / manuscripts",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/mittagessen/kraken",
+   "size": "",
+   "license_source": "repository licence field / model card",
+   "notes": "Trainable OCR/HTR engine with baseline segmentation; runs the BiblIA and HeOCR models. Use --reorder for logical-order RTL output."
+  },
+  {
+   "id": "escriptorium",
+   "name": "eScriptorium",
+   "type": "tool",
+   "task": "manuscript transcription platform",
+   "license": "MIT",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://gitlab.com/scripta/escriptorium",
+   "size": "",
+   "license_source": "GitLab project licence",
+   "notes": "Self-hosted web app around kraken for annotating and training on manuscripts."
+  },
+  {
+   "id": "ocrmypdf",
+   "name": "OCRmyPDF",
+   "type": "tool",
+   "task": "searchable PDFs",
+   "license": "MPL-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/ocrmypdf/OCRmyPDF",
+   "size": "",
+   "license_source": "repository licence field / model card",
+   "notes": "Adds a text layer to scanned PDFs: ocrmypdf -l heb in.pdf out.pdf."
+  },
+  {
+   "id": "surya",
+   "name": "Surya",
+   "type": "engine",
+   "task": "multilingual OCR + layout",
+   "license": "Apache-2.0 (code); modified AI Pubs Open Rail-M (weights)",
+   "commercial": "conditional",
+   "how": "linked",
+   "url": "https://github.com/datalab-to/surya",
+   "size": "",
+   "license_source": "README 'Commercial usage' section",
+   "notes": "Weights are free for research, personal use and startups under $5M funding/revenue; others need a commercial licence."
+  },
+  {
+   "id": "hebocr",
+   "name": "hebOCR (HOCR)",
+   "type": "engine",
+   "task": "printed OCR (classic)",
+   "license": "GPL-3.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/yaacov/hebocr",
+   "size": "",
+   "license_source": "repository licence field / model card",
+   "notes": "Older rule-based Hebrew OCR library; GPL copyleft applies."
+  },
+  {
+   "id": "heocr-engine",
+   "name": "HeOCR engine",
+   "type": "tool",
+   "task": "OCR baselines and training records",
+   "license": "MIT",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/HeOCR/heocr-engine",
+   "size": "",
+   "license_source": "repository licence field / model card",
+   "notes": "Code behind the HeOCR Tesseract and kraken models."
+  },
+  {
+   "id": "hocrgen",
+   "name": "HeOCR hocrgen",
+   "type": "tool",
+   "task": "synthetic Hebrew page generation",
+   "license": "MIT",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/HeOCR/hocrgen",
+   "size": "",
+   "license_source": "repository licence field / model card",
+   "notes": "Dataset building and synthetic Hebrew document pages for training."
+  },
+  {
+   "id": "trdg",
+   "name": "TextRecognitionDataGenerator",
+   "type": "tool",
+   "task": "synthetic line images",
+   "license": "MIT",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/Belval/TextRecognitionDataGenerator",
+   "size": "",
+   "license_source": "repository licence field / model card",
+   "notes": "Render training lines from a font + text; works with Hebrew fonts (check RTL handling of your version)."
+  },
+  {
+   "id": "htr-united",
+   "name": "HTR-United catalog",
+   "type": "list",
+   "task": "ground-truth catalog",
+   "license": "CC0-1.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://htr-united.github.io/",
+   "size": "",
+   "license_source": "GitHub repo HTR-United/htr-united",
+   "notes": "Catalog of open HTR ground truth; filter by Hebrew script."
+  },
+  {
+   "id": "tessdata-fast-heb",
+   "name": "tessdata_fast heb.traineddata",
+   "type": "model",
+   "task": "printed OCR",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "vendored",
+   "url": "https://github.com/tesseract-ocr/tessdata_fast",
+   "size": "0.96 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "Vendored in vendor/tessdata-fast-heb/ (model alias heb-fast)."
+  },
+  {
+   "id": "tessdata-best-heb",
+   "name": "tessdata_best heb.traineddata",
+   "type": "model",
+   "task": "printed OCR",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/tesseract-ocr/tessdata_best",
+   "size": "3.7 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "Most accurate stock model; base of the HeOCR fine-tunes.",
+   "fetch": {
+    "kind": "url",
+    "files": [
+     "https://github.com/tesseract-ocr/tessdata_best/raw/main/heb.traineddata"
+    ]
+   }
+  },
+  {
+   "id": "tessdata-script-hebrew",
+   "name": "tessdata_best script/Hebrew.traineddata",
+   "type": "model",
+   "task": "printed OCR (Hebrew script, incl. Yiddish)",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/tesseract-ocr/tessdata_best/tree/main/script",
+   "size": "12.2 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "Script-level model covering Hebrew-script languages.",
+   "fetch": {
+    "kind": "url",
+    "files": [
+     "https://github.com/tesseract-ocr/tessdata_best/raw/main/script/Hebrew.traineddata"
+    ]
+   }
+  },
+  {
+   "id": "heocr-r8b",
+   "name": "HeOCR R8b (Tesseract)",
+   "type": "model",
+   "task": "printed OCR",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "vendored",
+   "url": "https://huggingface.co/HeOCR/heocr-r8b-tesseract-heb",
+   "size": "3.6 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "Fine-tune of tessdata_best heb on real scans; adds ׳ ״ —. No nikud, no Latin. Vendored in vendor/heocr-r8b/ (alias heocr-r8b)."
+  },
+  {
+   "id": "heocr-r7",
+   "name": "HeOCR R7 (Tesseract)",
+   "type": "model",
+   "task": "printed OCR",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/HeOCR/heocr-r7-tesseract-heb",
+   "size": "3.7 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "Earlier fine-tune; may read small dark grainy scans better than R8b.",
+   "fetch": {
+    "kind": "hf",
+    "repo": "HeOCR/heocr-r7-tesseract-heb",
+    "files": [
+     "heocr_r7.traineddata",
+     "LICENSE",
+     "NOTICE"
+    ]
+   }
+  },
+  {
+   "id": "heocr-r6",
+   "name": "HeOCR R6 (Tesseract)",
+   "type": "model",
+   "task": "printed OCR",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/HeOCR/heocr-r6-tesseract-heb",
+   "size": "3.7 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "HeOCR/heocr-r6-tesseract-heb",
+    "files": [
+     "heocr_r6.traineddata",
+     "LICENSE",
+     "NOTICE"
+    ]
+   }
+  },
+  {
+   "id": "heocr-r3h",
+   "name": "HeOCR R3h recognition (kraken)",
+   "type": "model",
+   "task": "modern documents, print + handwriting-style",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/HeOCR/heocr-r3h-recognition",
+   "size": "16 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "Synthetic-only training; research baseline. Use with R4d segmentation and A1 reading order.",
+   "fetch": {
+    "kind": "hf",
+    "repo": "HeOCR/heocr-r3h-recognition",
+    "files": [
+     "heocr-r3h-recognition.safetensors",
+     "LICENSE",
+     "NOTICE"
+    ]
+   }
+  },
+  {
+   "id": "heocr-r4d",
+   "name": "HeOCR R4d segmentation (kraken)",
+   "type": "model",
+   "task": "line segmentation",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/HeOCR/heocr-r4d-segmentation",
+   "size": "5 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "HeOCR/heocr-r4d-segmentation",
+    "files": [
+     "heocr-r4d-segmentation.safetensors",
+     "LICENSE",
+     "NOTICE"
+    ]
+   }
+  },
+  {
+   "id": "heocr-a1",
+   "name": "HeOCR A1 reading order",
+   "type": "model",
+   "task": "reading order",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/HeOCR/heocr-a1-reading-order",
+   "size": "",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "HeOCR/heocr-a1-reading-order",
+    "files": [
+     "heocr-a1-reading-order.safetensors",
+     "LICENSE",
+     "NOTICE"
+    ]
+   }
+  },
+  {
+   "id": "biblia-model",
+   "name": "BiblIA_01 Medieval Hebrew (kraken)",
+   "type": "model",
+   "task": "medieval manuscripts",
+   "license": "CC-BY-SA-4.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://zenodo.org/records/5468286",
+   "size": "16 MB",
+   "license_source": "Zenodo record licence",
+   "notes": "Ashkenazi, Italian and Sephardi bookhands, ~97% char accuracy on validation. Share-alike.",
+   "fetch": {
+    "kind": "zenodo",
+    "record": "5468286"
+   }
+  },
+  {
+   "id": "biblia-ashkenazi",
+   "name": "Ashkenazi_01 (kraken)",
+   "type": "model",
+   "task": "medieval manuscripts",
+   "license": "CC-BY-SA-4.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://zenodo.org/records/5468478",
+   "size": "16 MB",
+   "license_source": "Zenodo record licence",
+   "notes": "",
+   "fetch": {
+    "kind": "zenodo",
+    "record": "5468478"
+   }
+  },
+  {
+   "id": "biblia-italian",
+   "name": "Italian_01 (kraken)",
+   "type": "model",
+   "task": "medieval manuscripts",
+   "license": "CC-BY-SA-4.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://zenodo.org/records/5468573",
+   "size": "16 MB",
+   "license_source": "Zenodo record licence",
+   "notes": "",
+   "fetch": {
+    "kind": "zenodo",
+    "record": "5468573"
+   }
+  },
+  {
+   "id": "biblia-sephardi",
+   "name": "Sephardi_01 (kraken)",
+   "type": "model",
+   "task": "medieval manuscripts",
+   "license": "CC-BY-SA-4.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://zenodo.org/records/5468665",
+   "size": "16 MB",
+   "license_source": "Zenodo record licence",
+   "notes": "",
+   "fetch": {
+    "kind": "zenodo",
+    "record": "5468665"
+   }
+  },
+  {
+   "id": "sofer-mahir",
+   "name": "Sofer Mahir models",
+   "type": "model",
+   "task": "rabbinic manuscripts (segmentation + HTR)",
+   "license": "CC-BY-NC-SA-4.0",
+   "commercial": "no",
+   "how": "linked",
+   "url": "https://github.com/dstoekl/sofer_mahir",
+   "size": "",
+   "license_source": "README licence line (no licence file)",
+   "notes": "Segmentation models for big Tannaitic-period manuscripts. Non-commercial: catalog only.",
+   "fetch": {
+    "kind": "github",
+    "repo": "dstoekl/sofer_mahir"
+   }
+  },
+  {
+   "id": "cyttic-hebrew-ocr",
+   "name": "Hebrew handwriting OCR (TrOCR-CTC, on-device)",
+   "type": "model",
+   "task": "handwriting lines",
+   "license": "MIT (dictabert-tiny parts CC-BY-4.0)",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/cyttic/hebrew-ocr-android",
+   "size": "519 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "int8 ONNX line models + char 6-gram LM; line finder is PP-OCRv5 det (Apache-2.0).",
+   "fetch": {
+    "kind": "hf",
+    "repo": "cyttic/hebrew-ocr-android",
+    "files": [
+     "README.md",
+     "charset.json",
+     "line_int8.onnx"
+    ]
+   }
+  },
+  {
+   "id": "ppocrv5-det",
+   "name": "PP-OCRv5 server text detector (ONNX)",
+   "type": "model",
+   "task": "text detection",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/PaddlePaddle/PP-OCRv5_server_det_onnx",
+   "size": "88 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "PaddlePaddle/PP-OCRv5_server_det_onnx",
+    "files": [
+     "inference.onnx",
+     "inference.yml"
+    ]
+   }
+  },
+  {
+   "id": "pylaia-heb-synth",
+   "name": "PyLaia Hebrew synthetic lines",
+   "type": "model",
+   "task": "printed/handwritten lines (PyLaia)",
+   "license": "MIT",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/johnlockejrr/pylaia-heb_synth_lines_pytorch_2",
+   "size": "54 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "johnlockejrr/pylaia-heb_synth_lines_pytorch_2",
+    "files": [
+     "README.md",
+     "weights.ckpt",
+     "syms.txt",
+     "model"
+    ]
+   }
+  },
+  {
+   "id": "ppocr-sam-heb",
+   "name": "PP-OCRv6 Samaritan/Hebrew",
+   "type": "model",
+   "task": "Samaritan and Hebrew lines",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/johnlockejrr/ppocrv6-sam-heb",
+   "size": "139 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "johnlockejrr/ppocrv6-sam-heb",
+    "files": [
+     "README.md",
+     "ppocrv6_sam_heb_small.safetensors"
+    ]
+   }
+  },
+  {
+   "id": "hebmss-mnist",
+   "name": "Hebrew manuscripts letter classifier",
+   "type": "model",
+   "task": "single-letter classification",
+   "license": "MIT",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/bsesic/HebrewManuscriptsMNIST",
+   "size": "8 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "bsesic/HebrewManuscriptsMNIST",
+    "files": [
+     "README.md",
+     "hebrew_letter_model.keras"
+    ]
+   }
+  },
+  {
+   "id": "paleo-mt5",
+   "name": "Paleo-Hebrew post-OCR (mT5)",
+   "type": "model",
+   "task": "post-OCR correction (paleo-Hebrew)",
+   "license": "MIT",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/mr3vial/paleo-hebrew-mt5-post-ocr-processing",
+   "size": "7 GB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "mr3vial/paleo-hebrew-mt5-post-ocr-processing",
+    "files": [
+     "README.md",
+     "config.json"
+    ]
+   }
+  },
+  {
+   "id": "trocr-sivan",
+   "name": "testing-trOCR-hebrew-handwritten",
+   "type": "model",
+   "task": "handwriting (experimental)",
+   "license": "none stated",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://huggingface.co/sivan22/testing-trOCR-hebrew-handwritten",
+   "size": "965 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "Author describes it as an unsuccessful experiment. Benchmark use only.",
+   "fetch": {
+    "kind": "hf",
+    "repo": "sivan22/testing-trOCR-hebrew-handwritten",
+    "files": [
+     "config.json",
+     "pytorch_model.bin"
+    ]
+   }
+  },
+  {
+   "id": "oln-trocr",
+   "name": "hebrew-htr-trocr",
+   "type": "model",
+   "task": "handwriting",
+   "license": "none stated",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://huggingface.co/oln-1/hebrew-htr-trocr",
+   "size": "1.3 GB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "oln-1/hebrew-htr-trocr",
+    "files": [
+     "config.json",
+     "model.safetensors"
+    ]
+   }
+  },
+  {
+   "id": "sentraio-crnn",
+   "name": "ocr-rec-hebrew-crnn (ONNX)",
+   "type": "model",
+   "task": "printed line recognition",
+   "license": "none stated",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://huggingface.co/sentraio/ocr-rec-hebrew-crnn",
+   "size": "63 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "sentraio/ocr-rec-hebrew-crnn",
+    "files": [
+     "hebrew_crnn_v4.onnx",
+     "hebrew_crnn_v4_vocab.txt"
+    ]
+   }
+  },
+  {
+   "id": "kohelet-htr",
+   "name": "Qwen3-VL Hebrew HTR adapters",
+   "type": "model",
+   "task": "handwriting (VLM LoRA)",
+   "license": "none stated",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://huggingface.co/kohelet-splendour/qwen3-vl-hebrew-htr",
+   "size": "432 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "Family of LoRA adapters; base model licence also applies.",
+   "fetch": {
+    "kind": "hf",
+    "repo": "kohelet-splendour/qwen3-vl-hebrew-htr",
+    "files": [
+     "README.md",
+     "adapter_config.json"
+    ]
+   }
+  },
+  {
+   "id": "dijest-transkribus",
+   "name": "DiJeSt 3.0 (Transkribus)",
+   "type": "service",
+   "task": "printed Hebrew/Yiddish",
+   "license": "platform terms (not an open licence)",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://www.transkribus.org/models/dijest-30",
+   "size": "",
+   "license_source": "Transkribus model page",
+   "notes": "1.79% CER on its validation set; runs only on the Transkribus platform."
+  },
+  {
+   "id": "hhd",
+   "name": "HHD_v0 Hebrew handwritten letters",
+   "type": "dataset",
+   "task": "handwritten letters",
+   "license": "CC-BY-4.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://zenodo.org/records/4287442",
+   "size": "43 MB",
+   "license_source": "Zenodo record licence",
+   "notes": "~5,000 isolated letters from forms, TRAIN/TEST split. Cite Rabaev et al., ICFHR 2020.",
+   "fetch": {
+    "kind": "zenodo",
+    "record": "4287442"
+   }
+  },
+  {
+   "id": "hhd-hf",
+   "name": "hebrew-handwritten-characters (HHD mirror)",
+   "type": "dataset",
+   "task": "handwritten letters",
+   "license": "CC-BY-3.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/datasets/sivan22/hebrew-handwritten-characters",
+   "size": "42 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "Hub mirror of HHD_v0; note the Hub tag says CC-BY-3.0 while Zenodo says CC-BY-4.0.",
+   "fetch": {
+    "kind": "hf-dataset",
+    "repo": "sivan22/hebrew-handwritten-characters",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "hhd-hf-parquet",
+   "name": "hebrew-handwritten-dataset (parquet)",
+   "type": "dataset",
+   "task": "handwritten letters",
+   "license": "CC-BY-3.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/datasets/sivan22/hebrew-handwritten-dataset",
+   "size": "42 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf-dataset",
+    "repo": "sivan22/hebrew-handwritten-dataset",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "biblia-dataset",
+   "name": "BiblIA open annotated dataset",
+   "type": "dataset",
+   "task": "medieval manuscripts (ALTO)",
+   "license": "CC-BY-NC-SA-4.0",
+   "commercial": "no",
+   "how": "linked",
+   "url": "https://zenodo.org/records/5167263",
+   "size": "546 MB",
+   "license_source": "Zenodo record licence",
+   "notes": "202 pages, layout + transcription. Non-commercial: catalog only.",
+   "fetch": {
+    "kind": "zenodo",
+    "record": "5167263"
+   }
+  },
+  {
+   "id": "ivrit-hw-bench",
+   "name": "Hebrew handwriting OCR benchmark",
+   "type": "dataset",
+   "task": "handwriting lines + pages (test)",
+   "license": "other (\"ivrit.ai\" licence), gated",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://huggingface.co/datasets/ivrit-ai/hebrew-handwriting-ocr-benchmark",
+   "size": "23 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "Accept the terms on the Hub before downloading.",
+   "fetch": {
+    "kind": "hf-dataset",
+    "repo": "ivrit-ai/hebrew-handwriting-ocr-benchmark",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "diffusionpen-heb",
+   "name": "DiffusionPen Hebrew handwriting (synthetic)",
+   "type": "dataset",
+   "task": "synthetic handwriting lines",
+   "license": "MIT (Hub tag); card text says CC-BY-4.0",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://huggingface.co/datasets/cyttic/diffusionpen-hebrew-handwriting",
+   "size": "4.3 GB",
+   "license_source": "repository licence field / model card",
+   "notes": "Card says the licence does not cover rights in the source texts.",
+   "fetch": {
+    "kind": "hf-dataset",
+    "repo": "cyttic/diffusionpen-hebrew-handwriting",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "matan-words",
+   "name": "matan Hebrew handwriting words",
+   "type": "dataset",
+   "task": "handwritten words",
+   "license": "other (placeholder; see original corpus)",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://huggingface.co/datasets/cyttic/matan-hebrew-handwriting-words",
+   "size": "92 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf-dataset",
+    "repo": "cyttic/matan-hebrew-handwriting-words",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "synth-htr",
+   "name": "synth-HTR",
+   "type": "dataset",
+   "task": "synthetic handwriting lines",
+   "license": "none stated",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://huggingface.co/datasets/sivan22/synth-HTR",
+   "size": "2.9 GB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf-dataset",
+    "repo": "sivan22/synth-HTR",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "doctags",
+   "name": "hebrew-ocr-doctags-dataset_v2",
+   "type": "dataset",
+   "task": "document OCR (DocTags)",
+   "license": "none stated",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://huggingface.co/datasets/youssefkhalil320/hebrew-ocr-doctags-dataset_v2",
+   "size": "637 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf-dataset",
+    "repo": "youssefkhalil320/hebrew-ocr-doctags-dataset_v2",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "mbole-ocr",
+   "name": "hebrew-ocr-dataset (TSV)",
+   "type": "dataset",
+   "task": "OCR text pairs",
+   "license": "none stated",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://huggingface.co/datasets/mbole/hebrew-ocr-dataset",
+   "size": "0.1 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf-dataset",
+    "repo": "mbole/hebrew-ocr-dataset",
+    "files": [
+     "hebrew_dataset.tsv"
+    ]
+   }
+  },
+  {
+   "id": "hebmss-ds",
+   "name": "HebrewManuscripts",
+   "type": "dataset",
+   "task": "manuscript letters",
+   "license": "MIT",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/datasets/bsesic/HebrewManuscripts",
+   "size": "",
+   "license_source": "repository licence field / model card",
+   "notes": "Card only at time of check."
+  },
+  {
+   "id": "yidtaknl",
+   "name": "YidTakNL corpus (Amsterdam regulations)",
+   "type": "dataset",
+   "task": "Yiddish/Hebrew-script ground truth",
+   "license": "CC-BY-4.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://zenodo.org/records/11179901",
+   "size": "",
+   "license_source": "Zenodo record licence",
+   "notes": "One of the DiJeSt 3.0 training sources."
+  },
+  {
+   "id": "ben-yehuda",
+   "name": "Project Ben-Yehuda public-domain dump",
+   "type": "dataset",
+   "task": "Hebrew literature text (OCR language models, labels)",
+   "license": "Public domain",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/projectbenyehuda/public_domain_dump",
+   "size": "",
+   "license_source": "LICENSE file",
+   "notes": "Large; clone or download releases. Credit 'Project Ben-Yehuda volunteers' if you like."
+  },
+  {
+   "id": "sefaria-export",
+   "name": "Sefaria export",
+   "type": "dataset",
+   "task": "Torah, siddur and rabbinic texts",
+   "license": "per text: Public Domain / CC0 / CC-BY / CC-BY-SA / CC-BY-NC",
+   "commercial": "conditional",
+   "how": "linked",
+   "url": "https://github.com/Sefaria/Sefaria-Export",
+   "size": "",
+   "license_source": "LICENSE.md (each text has its own licence field)",
+   "notes": "Filter on each JSON's license field; drop CC-BY-NC texts for commercial use."
+  },
+  {
+   "id": "nli-manuscripts",
+   "name": "National Library of Israel: Ktiv Hebrew manuscripts",
+   "type": "dataset",
+   "task": "manuscript images (IIIF)",
+   "license": "per item: terms set by each holding library",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://www.nli.org.il/en/discover/manuscripts/hebrew-manuscripts",
+   "size": "",
+   "license_source": "Ktiv FAQ and each item's terms of use",
+   "notes": "Credit the holding library as shown; uses not expressly permitted need the library's written approval. Some NLI scans are marked 'public domain, free use'."
+  },
+  {
+   "id": "dictabert-menaked",
+   "name": "DictaBERT-large char menaked",
+   "type": "model",
+   "task": "nikud restoration",
+   "license": "CC-BY-4.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/dicta-il/dictabert-large-char-menaked",
+   "size": "1.2 GB",
+   "license_source": "repository licence field / model card",
+   "notes": "Modern prose; not for Biblical/Rabbinic text. int8 ONNX ~303 MiB runs in WASM at ~0.5 s/sentence.",
+   "fetch": {
+    "kind": "hf",
+    "repo": "dicta-il/dictabert-large-char-menaked",
+    "files": [
+     "README.md",
+     "config.json"
+    ]
+   }
+  },
+  {
+   "id": "dictabert-joint",
+   "name": "DictaBERT joint",
+   "type": "model",
+   "task": "morphology + syntax + lemmas",
+   "license": "CC-BY-4.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/dicta-il/dictabert-joint",
+   "size": "1.5 GB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "dicta-il/dictabert-joint",
+    "files": [
+     "README.md",
+     "config.json"
+    ]
+   }
+  },
+  {
+   "id": "dictabert-seg",
+   "name": "DictaBERT seg",
+   "type": "model",
+   "task": "prefix segmentation",
+   "license": "CC-BY-4.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/dicta-il/dictabert-seg",
+   "size": "1.5 GB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "dicta-il/dictabert-seg",
+    "files": [
+     "README.md",
+     "LICENSE"
+    ]
+   }
+  },
+  {
+   "id": "dictabert-morph",
+   "name": "DictaBERT morph",
+   "type": "model",
+   "task": "morphological tagging",
+   "license": "CC-BY-4.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/dicta-il/dictabert-morph",
+   "size": "1.5 GB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "dicta-il/dictabert-morph",
+    "files": [
+     "README.md",
+     "LICENSE"
+    ]
+   }
+  },
+  {
+   "id": "dictabert-lex",
+   "name": "DictaBERT lex",
+   "type": "model",
+   "task": "lemmatization",
+   "license": "CC-BY-4.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/dicta-il/dictabert-lex",
+   "size": "1.5 GB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "dicta-il/dictabert-lex",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "dictabert-ner",
+   "name": "DictaBERT NER",
+   "type": "model",
+   "task": "named entities (keep names out of OCR correction)",
+   "license": "CC-BY-4.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/dicta-il/dictabert-ner",
+   "size": "1.5 GB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "dicta-il/dictabert-ner",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "berel3",
+   "name": "BEREL 3.0",
+   "type": "model",
+   "task": "Rabbinic Hebrew language model",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/dicta-il/BEREL_3.0",
+   "size": "1.5 GB",
+   "license_source": "repository licence field / model card",
+   "notes": "For Torah/Rabbinic text QA and fill-mask checks.",
+   "fetch": {
+    "kind": "hf",
+    "repo": "dicta-il/BEREL_3.0",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "msbert",
+   "name": "MsBERT (manuscripts)",
+   "type": "model",
+   "task": "manuscript Hebrew language model",
+   "license": "CC-BY-4.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/dicta-il/MsBERT",
+   "size": "743 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "dicta-il/MsBERT",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "alephbertgimmel",
+   "name": "AlephBertGimmel base",
+   "type": "model",
+   "task": "Hebrew language model",
+   "license": "CC0-1.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/dicta-il/alephbertgimmel-base",
+   "size": "1.5 GB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "dicta-il/alephbertgimmel-base",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "alephbert",
+   "name": "AlephBERT base",
+   "type": "model",
+   "task": "Hebrew language model",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/onlplab/alephbert-base",
+   "size": "1.7 GB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "onlplab/alephbert-base",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "nakdimon",
+   "name": "Nakdimon",
+   "type": "tool",
+   "task": "nikud restoration",
+   "license": "MIT",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/elazarg/nakdimon",
+   "size": "",
+   "license_source": "repository licence field / model card",
+   "notes": "pip install nakdimon; ONNX runtime, no dictionary."
+  },
+  {
+   "id": "unikud",
+   "name": "UNIKUD",
+   "type": "tool",
+   "task": "nikud restoration",
+   "license": "MIT",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/morrisalp/unikud",
+   "size": "",
+   "license_source": "repository licence field / model card",
+   "notes": "pip install unikud; CANINE-based."
+  },
+  {
+   "id": "phonikud-onnx",
+   "name": "Phonikud ONNX",
+   "type": "model",
+   "task": "nikud + phonemes + stress",
+   "license": "MIT",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/thewh1teagle/phonikud-onnx",
+   "size": "616 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "thewh1teagle/phonikud-onnx",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "phonikud",
+   "name": "Phonikud (code)",
+   "type": "tool",
+   "task": "Hebrew grapheme-to-phoneme",
+   "license": "CC-BY-4.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/thewh1teagle/phonikud",
+   "size": "",
+   "license_source": "LICENSE file (GitHub shows 'Other')",
+   "notes": ""
+  },
+  {
+   "id": "d-nikud",
+   "name": "D-Nikud",
+   "type": "model",
+   "task": "nikud restoration",
+   "license": "none stated",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://huggingface.co/NadavShaked/D_Nikud",
+   "size": "894 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "Neither the Hub card nor the GitHub repo states a licence.",
+   "fetch": {
+    "kind": "hf",
+    "repo": "NadavShaked/D_Nikud",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "hebrew-punctuation",
+   "name": "hebrew_punctuation",
+   "type": "model",
+   "task": "punctuation restoration",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://huggingface.co/verbit/hebrew_punctuation",
+   "size": "560 MB",
+   "license_source": "repository licence field / model card",
+   "notes": "",
+   "fetch": {
+    "kind": "hf",
+    "repo": "verbit/hebrew_punctuation",
+    "files": [
+     "README.md"
+    ]
+   }
+  },
+  {
+   "id": "yap",
+   "name": "YAP parser",
+   "type": "tool",
+   "task": "morphology + dependency parsing",
+   "license": "Apache-2.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/OnlpLab/yap",
+   "size": "",
+   "license_source": "repository licence field / model card",
+   "notes": ""
+  },
+  {
+   "id": "hebrew-py",
+   "name": "hebrew (Python package)",
+   "type": "tool",
+   "task": "text normalization, nikud, gematria",
+   "license": "MIT",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/avi-perl/Hebrew",
+   "size": "",
+   "license_source": "repository licence field / model card",
+   "notes": "pip install hebrew; grapheme handling and normalization helpers."
+  },
+  {
+   "id": "hspell",
+   "name": "Hspell",
+   "type": "tool",
+   "task": "spell checking / morphology",
+   "license": "AGPL-3.0",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/synhershko/hspell",
+   "size": "",
+   "license_source": "README (fork of the official release; hspell.ivrix.org.il was down when checked)",
+   "notes": "Copyleft, and the AGPL covers the dictionary files and word lists too; good word list for OCR post-correction if AGPL suits you."
+  },
+  {
+   "id": "dicta-nakdan",
+   "name": "Dicta Nakdan (web)",
+   "type": "service",
+   "task": "nikud",
+   "license": "free web service; Dicta terms of use",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://nakdan.dicta.org.il/",
+   "size": "",
+   "license_source": "site terms",
+   "notes": "Use the CC-BY DictaBERT models for anything automated or offline."
+  },
+  {
+   "id": "font-frank-ruhl",
+   "name": "Frank Ruhl Libre",
+   "type": "font",
+   "task": "synthetic training data (serif print)",
+   "license": "OFL-1.1",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/google/fonts/tree/main/ofl/frankruhllibre",
+   "size": "",
+   "license_source": "OFL.txt in folder",
+   "notes": ""
+  },
+  {
+   "id": "font-david-libre",
+   "name": "David Libre",
+   "type": "font",
+   "task": "synthetic training data (print)",
+   "license": "OFL-1.1",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/google/fonts/tree/main/ofl/davidlibre",
+   "size": "",
+   "license_source": "OFL.txt in folder",
+   "notes": ""
+  },
+  {
+   "id": "font-noto-sans-hebrew",
+   "name": "Noto Sans Hebrew",
+   "type": "font",
+   "task": "synthetic training data (sans)",
+   "license": "OFL-1.1",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/google/fonts/tree/main/ofl/notosanshebrew",
+   "size": "",
+   "license_source": "OFL.txt in folder",
+   "notes": ""
+  },
+  {
+   "id": "font-noto-serif-hebrew",
+   "name": "Noto Serif Hebrew",
+   "type": "font",
+   "task": "synthetic training data (serif, nikud)",
+   "license": "OFL-1.1",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/google/fonts/tree/main/ofl/notoserifhebrew",
+   "size": "",
+   "license_source": "OFL.txt in folder",
+   "notes": ""
+  },
+  {
+   "id": "culmus",
+   "name": "Culmus fonts",
+   "type": "font",
+   "task": "synthetic training data (incl. Taamey for teamim)",
+   "license": "GPL-2.0, some fonts with embedding exception",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://culmus.sourceforge.io/",
+   "size": "",
+   "license_source": "project home page 'License' section",
+   "notes": "Taamey Frank/David render vowels and cantillation correctly."
+  },
+  {
+   "id": "awesome-hebrew-nlp",
+   "name": "awesome-hebrew-nlp",
+   "type": "list",
+   "task": "resource list",
+   "license": "none stated",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://github.com/iddoberger/awesome-hebrew-nlp",
+   "size": "",
+   "license_source": "repository licence field / model card",
+   "notes": "Read online; not copied."
+  },
+  {
+   "id": "nnlp-il",
+   "name": "NNLP-IL Hebrew Resources",
+   "type": "list",
+   "task": "resource list",
+   "license": "per folder (see repo)",
+   "commercial": "unclear",
+   "how": "linked",
+   "url": "https://github.com/NNLP-IL/Hebrew-Resources",
+   "size": "",
+   "license_source": "LICENSE.txt",
+   "notes": ""
+  },
+  {
+   "id": "alef-tools",
+   "name": "alef-tools (ocr-fix, handwriting, nikud packages)",
+   "type": "tool",
+   "task": "browser OCR clean-up, letter checker, nikud packs",
+   "license": "MIT (author's own code)",
+   "commercial": "yes",
+   "how": "linked",
+   "url": "https://github.com/ALENZACODES/alef-tools",
+   "size": "",
+   "license_source": "author",
+   "notes": "Same author as Heb1; the lessons in guides/ come from this work."
+  }
+ ]
+}

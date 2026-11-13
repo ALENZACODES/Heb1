@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.9", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Tesseract with Hebrew, and fonts
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q tesseract-ocr tesseract-ocr-heb fonts-dejavu-core
+          tesseract --version
+          tesseract --list-langs
+      - name: Test font (Frank Ruhl Libre, OFL, from Google Fonts)
+        run: |
+          mkdir -p "$RUNNER_TEMP/fonts"
+          curl -sSfL -o "$RUNNER_TEMP/fonts/FrankRuhlLibre.ttf" "https://github.com/google/fonts/raw/main/ofl/frankruhllibre/FrankRuhlLibre%5Bwght%5D.ttf"
+          echo "HEB1_TEST_FONT=$RUNNER_TEMP/fonts/FrankRuhlLibre.ttf" >> "$GITHUB_ENV"
+      - name: Install
+        run: pip install -e '.[test]'
+      - name: Catalog and README in sync
+        run: python tools/build_catalog.py --check
+      - name: Tests
+        run: pytest -v
+      - name: CLI smoke test
+        run: |
+          heb1 doctor
+          echo 'שלומ עולמ' | heb1 clean

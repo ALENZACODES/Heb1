@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heb1"
+version = "0.1.0"
+description = "Free and open Hebrew OCR in one place: a catalog, guides and a small Tesseract pipeline that outputs clean right-to-left text."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "John K (ALENZA CODES)"}]
+requires-python = ">=3.9"
+dependencies = ["Pillow>=9"]
+keywords = ["hebrew", "ocr", "tesseract", "nikud", "rtl", "htr"]
+classifiers = ["License :: OSI Approved :: MIT License", "Natural Language :: Hebrew", "Programming Language :: Python :: 3"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+heb1 = "heb1.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ALENZACODES/Heb1"
+
+[tool.setuptools]
+packages = ["heb1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
